@@ -1,6 +1,6 @@
-====
-Igor
-====
+# Igor
+
+Just made some adaptations for numpy > 1.20.
 
 :Authors: W. Trevor King <wking@tremily.us>;
           Paul Kienzle <paul.kienzle@nist.gov>
@@ -9,56 +9,12 @@ Igor
 Python parsers for Igor Binary Waves (.ibw) and Packed Experiment
 (.pxp) files written by WaveMetrics' IGOR Pro software.
 
-Installation
-============
+# Installation
+```shell
+pip install git+https://github.com/Ficere/igor
+```
 
-Packages
---------
-
-If `igor` already exists in your package manager's repository, you
-should install `igor` in the usual way.
-
-Gentoo
-~~~~~~
-
-I've packaged `igor` for Gentoo.  You need layman_ and my `wtk
-overlay`_.  Install with::
-
-    # emerge -av app-portage/layman
-    # layman --add wtk
-    # emerge -av sci-misc/igor
-
-Dependencies
-------------
-
-If you're installing by hand or packaging `igor` for another
-distribution, you'll need the following dependencies:
-
-===========  =================  ============================
-Package      Debian_            Gentoo_
-===========  =================  ============================
-Numpy_       python-numpy       dev-python/numpy
-Matplotlib_  python-matplotlib  dev-python/matplotlib
-Nose_        python-nose        dev-python/nose
-===========  =================  ============================
-
-Installing by hand
-------------------
-
-`igor` is available as a Git_ repository::
-
-    $ git clone git://tremily.us/igor.git
-
-See the homepage_ for details.  To install the checkout, run the
-standard::
-
-    $ python setup.py install
-
-You can also automate this installation with pip_::
-
-    $ pip install igor
-
-Usage
+# Usage
 =====
 
 See the docstrings and unit tests for examples using the Python API.
@@ -79,9 +35,10 @@ to::
 
 in your calling code.
 
-Testing
+# Testing
 =======
 
+```shell
 Run internal unit tests with::
 
     $ nosetests --with-doctest --doctest-tests igor test
@@ -89,15 +46,16 @@ Run internal unit tests with::
 The data in the ``test/data`` directory is in the Git repository, but
 it is not bundled with the source code.  If you want the test data,
 you'll have to clone the Git repository or download a snapshot.
+```
 
-Licence
+# Licence
 =======
 
 This project is distributed under the `GNU Lesser General Public
 License Version 3`_ or greater, see the ``COPYING`` file distributed
 with the project for details.
 
-Maintenance
+# Maintenance
 ===========
 
 Maintainer
